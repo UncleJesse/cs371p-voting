@@ -42,6 +42,26 @@ void read_case(istream& s,vector<string> &cand_names,vector<string>& ballot_line
 
 }
 
+void eval_ballots(vector<string> cand_names, vector<string> ballot_lines){
+	int vote_count[cand_names.size()];
+		int* temp = vote_count;
+		for (int j=0; j < cand_names.size(); j++) {
+			*temp =0;
+			++temp;
+		}
+		for (int k=0; k < ballot_lines.size(); k++){
+			vote_count[ballot_lines.at(k).at(0)-48-1]++;
+		}
+		for (m=0; m<cand_names.size(); m++){
+			if (cand_names.at(m) > cand_names.size/2){
+				
+			}
+		}
+		for (int t = 0; t < cand_names.size(); t++) {
+			cout << vote_count[t] << endl; 
+		}
+}
+
 // read in istream& s, determine number of test cases and call read_case for each test case
 void voting_read(istream& s){
 	string test_cases;
@@ -55,18 +75,7 @@ void voting_read(istream& s){
 		vector<string> ballot_lines;
 		read_case(s,cand_names,ballot_lines);
 		
-		int vote_count[cand_names.size()];
-		int* temp = vote_count;
-		for (int j=0; j < cand_names.size(); j++) {
-			*temp =0;
-			++temp;
-		}
-		for (int k=0; k < ballot_lines.size(); k++){
-			vote_count[ballot_lines.at(k).at(0)-48-1]++;
-		}
-		for (int t = 0; t < cand_names.size(); t++) {
-			cout << vote_count[t] << endl; 
-		}
+		eval_ballots(cand_names, ballot_lines);
 		cout << endl;
 	}
 	
