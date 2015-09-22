@@ -163,3 +163,10 @@ void voting_read(istream& s){
 	}
 	
 }
+
+
+int main (){
+	voting_read(cin);
+	return 0;
+
+}
