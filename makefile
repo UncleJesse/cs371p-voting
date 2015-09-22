@@ -1,9 +1,9 @@
 FILES :=                               \
     .travis.yml                        \
-    voting-tests/jem74-RunVoting.in   \
-    voting-tests/jem74-RunVoting.out  \
-    voting-tests/jem74-TestVoting.c++ \ 
-    voting-tests/jem74-TestVoting.out \
+    voting-tests/jem74-RunVoting.in    \
+    voting-tests/jem74-RunVoting.out   \
+    voting-tests/jem74-TestVoting.c++  \ 
+    voting-tests/jem74-TestVoting.out  \
     Voting.c++                         \
     Voting.h                           \
     Voting.log                         \
@@ -68,8 +68,8 @@ status:
 
 test: RunVoting.tmp TestVoting.tmp
 
-collatz-tests:
-	git clone https://github.com/cs371p-fall-2015/collatz-tests.git
+voting-tests:
+	git clone https://github.com/cs371p-fall-2015/voting-tests.git
 
 html: Doxyfile Voting.h Voting.c++ RunVoting.c++ TestVoting.c++
 	doxygen Doxyfile
