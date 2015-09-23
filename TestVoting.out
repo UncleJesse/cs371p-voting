@@ -1,0 +1,53 @@
+==26110== Memcheck, a memory error detector
+==26110== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==26110== Using Valgrind-3.10.0.SVN and LibVEX; rerun with -h for copyright info
+==26110== Command: ./TestVoting
+==26110== 
+Running main() from gtest_main.cc
+[==========] Running 9 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 9 tests from VotingFixture
+[ RUN      ] VotingFixture.read_case
+[       OK ] VotingFixture.read_case (171 ms)
+[ RUN      ] VotingFixture.read_case_2
+[       OK ] VotingFixture.read_case_2 (28 ms)
+[ RUN      ] VotingFixture.read_case_3
+[       OK ] VotingFixture.read_case_3 (31 ms)
+[ RUN      ] VotingFixture.eval_ballots
+[       OK ] VotingFixture.eval_ballots (58 ms)
+[ RUN      ] VotingFixture.eval_ballots2
+[       OK ] VotingFixture.eval_ballots2 (10 ms)
+[ RUN      ] VotingFixture.eval_ballots3
+[       OK ] VotingFixture.eval_ballots3 (8 ms)
+[ RUN      ] VotingFixture.voting_read
+[       OK ] VotingFixture.voting_read (10 ms)
+[ RUN      ] VotingFixture.voting_read_2
+[       OK ] VotingFixture.voting_read_2 (9 ms)
+[ RUN      ] VotingFixture.voting_read_3
+[       OK ] VotingFixture.voting_read_3 (11 ms)
+[----------] 9 tests from VotingFixture (355 ms total)
+
+[----------] Global test environment tear-down
+[==========] 9 tests from 1 test case ran. (421 ms total)
+[  PASSED  ] 9 tests.
+==26110== 
+==26110== HEAP SUMMARY:
+==26110==     in use at exit: 0 bytes in 0 blocks
+==26110==   total heap usage: 1,264 allocs, 1,264 frees, 231,134 bytes allocated
+==26110== 
+==26110== All heap blocks were freed -- no leaks are possible
+==26110== 
+==26110== For counts of detected and suppressed errors, rerun with: -v
+==26110== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+File 'Voting.c++'
+Lines executed:100.00% of 81
+Branches executed:100.00% of 200
+Taken at least once:61.50% of 200
+Calls executed:88.24% of 119
+Creating 'Voting.c++.gcov'
+File 'TestVoting.c++'
+Lines executed:100.00% of 138
+Branches executed:58.92% of 1480
+Taken at least once:29.46% of 1480
+Calls executed:42.31% of 1300
+Creating 'TestVoting.c++.gcov'

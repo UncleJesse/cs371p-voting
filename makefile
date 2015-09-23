@@ -86,7 +86,6 @@ RunVoting: Voting.h Voting.c++ RunVoting.c++
 RunVoting.tmp: RunVoting
 	./RunVoting < RunVoting.in > RunVoting.tmp
 	diff RunVoting.tmp RunVoting.out
-
 TestVoting: Voting.h Voting.c++ TestVoting.c++
 	$(CXX) $(CXXFLAGS) $(GCOVFLAGS) Voting.c++ TestVoting.c++ -o TestVoting $(LDFLAGS)
 
