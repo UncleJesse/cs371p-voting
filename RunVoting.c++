@@ -3,7 +3,7 @@
 #include "Voting.h"
 using namespace std;
 int main (){
-	voting_read(cin);
+	voting_read(cin,cout);
 	return 1;
 
 }

@@ -1,18 +1,18 @@
-FILES :=                               \
-    .travis.yml                        \
-    voting-tests/jem74-RunVoting.in    \
-    voting-tests/jem74-RunVoting.out   \
-    voting-tests/jem74-TestVoting.c++  \ 
-    voting-tests/jem74-TestVoting.out  \
-    Voting.c++                         \
-    Voting.h                           \
-    Voting.log                         \
-    html                               \
-    RunVoting.c++                      \
-    RunVoting.in                       \
-    RunVoting.out                      \
-    TestVoting.c++                     \
-    TestVoting.out 
+FILES :=                              \
+    .travis.yml                       \
+    voting-tests/jem74-RunVoting.in   \
+    voting-tests/jem74-RunVoting.out  \
+    voting-tests/jem74-TestVoting.c++ \
+    voting-tests/jem74-TestVoting.out \
+    Voting.c++                       \
+    Voting.h                         \
+    Voting.log                       \
+    html                              \
+    RunVoting.c++                    \
+    RunVoting.in                     \
+    RunVoting.out                    \
+    TestVoting.c++                   \
+    TestVoting.out
 
 CXX        := g++-4.8
 CXXFLAGS   := -pedantic -std=c++11 -Wall

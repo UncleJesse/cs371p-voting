@@ -27,7 +27,7 @@ void read_case(istream& s,vector<Candidate> &cand_names,vector<Ballot>& ballot_l
 	int num_cand = atoi(num_candidates.c_str());
 
 	// parse candidate names
-	for (int i =0;i < num_cand;i++) {
+	for ( int i =0;i < num_cand;i++) {
 		string candidate;
 		getline(s,candidate);
 		Candidate new_cad;
@@ -39,7 +39,7 @@ void read_case(istream& s,vector<Candidate> &cand_names,vector<Ballot>& ballot_l
 	// read ballots
 	string next_line;
 	bool check = !getline(s,next_line).eof();
-	while (check &&  (next_line.size()>0)) {
+	while (check &&  (!next_line.empty())) {
 		Ballot new_ballot;
 		new_ballot.line = next_line;
 		istringstream sin(next_line);
@@ -48,14 +48,14 @@ void read_case(istream& s,vector<Candidate> &cand_names,vector<Ballot>& ballot_l
 			int k;
 			sin >> k;
 			new_ballot.counter.push(k);
-		}	
+		}
 		ballot_lines.push_back(new_ballot);
 		check = !getline(s,next_line).eof();
 	}
 }
 
-void eval_ballots(vector<Candidate> cand_names, vector<Ballot> ballot_lines){
-		for (int k=0; k < ballot_lines.size(); k++){
+void eval_ballots(vector<Candidate> cand_names, vector<Ballot> ballot_lines, ostream& o){
+		for (unsigned int k=0; k < ballot_lines.size(); k++){
 			cand_names.at(ballot_lines.at(k).counter.front()-1).count_rows.push_back(k);
 
 		}
@@ -67,19 +67,19 @@ void eval_ballots(vector<Candidate> cand_names, vector<Ballot> ballot_lines){
 			int min = ballot_lines.size();
 			int max = 0;
 			// check for winner , also find the minimum vote 
-			for  (int m=0; m<cand_names.size(); m++){
+			for  (unsigned int m=0; m<cand_names.size(); m++){
 			 	if (cand_names.at(m).count_rows.size() > ballot_lines.size()/2){
-					cout <<	cand_names.at(m).name << endl;	
+					o <<	cand_names.at(m).name << endl;	
 			 		found_winner= true;
 			 		break;
 			 	}
-			 	if (cand_names.at(m).count_rows.size() < min) {
+			 	if (cand_names.at(m).count_rows.size() < (unsigned)min) {
 			 		if (!cand_names.at(m).eliminated) {
 			 			min = cand_names.at(m).count_rows.size();
 			 		}
 			 		
 			 	}
-			 	if (cand_names.at(m).count_rows.size() > max) {
+			 	if (cand_names.at(m).count_rows.size() > (unsigned)max) {
 			 			max = cand_names.at(m).count_rows.size();
 			 	}
 			 	
@@ -89,9 +89,9 @@ void eval_ballots(vector<Candidate> cand_names, vector<Ballot> ballot_lines){
 	     	
 	     	if ((min==max)&&(!found_winner)){
 	     		//check for the tie
-	     		for (int i =0; i <cand_names.size();i++) {
+	     		for ( int i =0; i <cand_names.size();i++) {
 	     			if (!cand_names.at(i).eliminated){
-	     				cout << cand_names.at(i).name << endl;
+	     				o << cand_names.at(i).name << endl;
 	     			}
 	     		}
 	     		found_winner = true;
@@ -102,11 +102,12 @@ void eval_ballots(vector<Candidate> cand_names, vector<Ballot> ballot_lines){
 			if (found_winner) {
 	     		break;
 	     	}
+
 	     	vector<int> this_round_losers;
 	     	//cout << "this round lose size " << this_round_losers.size() << endl;
 	     	for (int i = 0; i < cand_names.size();i++) {
 	     		// find all the loser for this round
-	     		if ((cand_names.at(i).count_rows.size()==min)&&(!cand_names.at(i).eliminated)) {
+	     		if ((cand_names.at(i).count_rows.size()==(unsigned)min)&&(!cand_names.at(i).eliminated)) {
 	     		// reduce number of still running cadidate
 	     			cand_names.at(i).eliminated=true;
 
@@ -117,9 +118,9 @@ void eval_ballots(vector<Candidate> cand_names, vector<Ballot> ballot_lines){
 	      	// for (int k1 = 0; k1 < this_round_losers.size(); k1++) {
 	     	// 	cout << "name of the loser " << cand_names.at(this_round_losers.at(k1)).name << endl;
 	     	// }
-	     	for (int k =0; k < this_round_losers.size();k++){
+	     	for (unsigned int k =0; k < this_round_losers.size();k++){
 
-	     		for (int j=0; j < cand_names.at(this_round_losers.at(k)).count_rows.size();j++) {
+	     		for (unsigned int j=0; j < cand_names.at(this_round_losers.at(k)).count_rows.size();j++) {
 	     		
 	     			int row = cand_names.at(this_round_losers.at(k)).count_rows.at(j);
 	     			// take out the name of the next ballot in the row
@@ -128,7 +129,7 @@ void eval_ballots(vector<Candidate> cand_names, vector<Ballot> ballot_lines){
 	     			// if the name of the next ballot is already in the loser list, dicard it until find the name that
 	     			// is not in the loser list
 	     		
-	     			while ((cand_names.at(next_in_line).eliminated)||(cand_names.at(next_in_line).count_rows.size()==min)) {
+	     			while ((cand_names.at(next_in_line).eliminated)||(cand_names.at(next_in_line).count_rows.size()==(unsigned)min)) {
 	     			//	ssin.at(row) >> ballot_lines.at(k).counter;
 	     				ballot_lines.at(row).counter.pop();
 	     				next_in_line = cand_names.at(ballot_lines.at(row).counter.front()-1).cand_code;
@@ -147,7 +148,7 @@ void eval_ballots(vector<Candidate> cand_names, vector<Ballot> ballot_lines){
 }
 
 // read in istream& s, determine number of test cases and call read_case for each test case
-void voting_read(istream& s){
+void voting_read(istream& s, ostream& o){
 	string test_cases;
 	getline(s, test_cases);
 	string blank_line;
@@ -157,16 +158,17 @@ void voting_read(istream& s){
 		vector<Candidate> Cadidates;
 		vector<Ballot> ballot_lines;
 		read_case(s,Cadidates,ballot_lines);
-	    eval_ballots(Cadidates, ballot_lines);
-		if (i < t_cases -1)
-			cout << endl;
+	    eval_ballots(Cadidates, ballot_lines, o);
+		if ((int)i < t_cases -1)
+			o << endl;
 	}
 	
 }
 
 
+
 int main (){
-	voting_read(cin);
+	voting_read(cin,cout);
 	return 0;
 
 }
