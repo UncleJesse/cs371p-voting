@@ -1,3 +1,15 @@
+commit dd8b3fb653394dea33a465245f1c1cf64d99c780
+Author: unclejesse <unclejesse@utexas.edu>
+Date:   Wed Sep 23 21:10:20 2015 -0500
+
+    clean
+
+commit bfc0a92c191f4f53a514e8dae56e0ce7ac714f45
+Author: unclejesse <unclejesse@utexas.edu>
+Date:   Wed Sep 23 21:07:05 2015 -0500
+
+    Fixed #1,Fixed #2, Fixed #3, Fixed #8, Fixed #10, Fixed #15, add html and log
+
 commit fe60309aa36b1a2d61191d2a516612205be12000
 Author: unclejesse <unclejesse@utexas.edu>
 Date:   Wed Sep 23 19:42:43 2015 -0500
