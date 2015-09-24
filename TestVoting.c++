@@ -154,7 +154,7 @@ TEST(VotingFixture, eval_ballots2){
 	vector<Candidate> cand_names;
 	vector<Ballot> ballot_lines;
 	read_case(s, cand_names, ballot_lines);
-	eval_ballots(cand_names, ballot_lines, o);
+	eval_ballots(cand_names, ballot_lines,o );
 	ASSERT_EQ("D\n",o.str());
 }
 
