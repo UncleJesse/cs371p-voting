@@ -1,3 +1,6 @@
+/** @file Voting.c++
+*	@brief Voting functions implementation
+*/
 #include <iostream>
 #include <sstream>
 #include <cassert>

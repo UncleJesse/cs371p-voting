@@ -1,4 +1,6 @@
-
+/** @file Voting.h
+*	@brief Voting functions API
+*/
 #ifndef VOTING_H
 #define VOTING_H
 #include <iostream>

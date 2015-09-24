@@ -1,3 +1,6 @@
+/** @file UVaVoting.c++
+*	@brief online judge file
+*/
 #include <iostream>
 #include <sstream>
 #include <cassert>

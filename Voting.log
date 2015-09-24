@@ -1,0 +1,102 @@
+commit fe60309aa36b1a2d61191d2a516612205be12000
+Author: unclejesse <unclejesse@utexas.edu>
+Date:   Wed Sep 23 19:42:43 2015 -0500
+
+    fixed output input, Fixed #13, Fixed #14, Fixed #12, Fixed #11
+
+commit f2233848c1f31ab5bf9e09b838069f52fff777f5
+Author: unclejesse <unclejesse@utexas.edu>
+Date:   Wed Sep 23 17:18:52 2015 -0500
+
+    finished writing test cases, fixes #9
+
+commit 65919bc4afba319bff47f911fab67358d963d5cd
+Merge: 75967e1 73bd57d
+Author: unclejesse <unclejesse@utexas.edu>
+Date:   Wed Sep 23 14:54:39 2015 -0500
+
+    working on RunVoting.in, merging remote branch to mine
+
+commit 75967e1ca68296b0ec9674e275392a8d2436b948
+Author: unclejesse <unclejesse@utexas.edu>
+Date:   Wed Sep 23 14:51:08 2015 -0500
+
+    working on RunVoting.in
+
+commit 73bd57d61ea21e0ec507616ebd57eeb3383c9572
+Author: TrungNguyenBa <tantrungnb@gmail.com>
+Date:   Wed Sep 23 10:20:19 2015 -0500
+
+    add gitignore
+
+commit b75baa738fa521b5a111f0b5ec60898e3cb0010a
+Author: TrungNguyenBa <tantrungnb@gmail.com>
+Date:   Wed Sep 23 03:03:34 2015 -0500
+
+    fix make file, add TestVoting.out
+
+commit 1f1f996a6f763796c4c50628cc224709ab1b4964
+Author: TrungNguyenBa <tantrungnb@gmail.com>
+Date:   Wed Sep 23 02:32:28 2015 -0500
+
+    fixed makefile
+
+commit fa5fb753a30c3a9f5d2fefbe357fab354b6ffefb
+Author: unclejesse <unclejesse@utexas.edu>
+Date:   Tue Sep 22 20:34:57 2015 -0500
+
+    adding unit test
+
+commit 1e8760af9b421ef53383d396748710cc7aa2b18d
+Author: unclejesse <unclejesse@utexas.edu>
+Date:   Tue Sep 22 20:34:43 2015 -0500
+
+    adding unit test
+
+commit 73ec251ae859017150aa726cce5fd5019101d12b
+Author: unclejesse <unclejesse@utexas.edu>
+Date:   Tue Sep 22 17:42:44 2015 -0500
+
+    made changes to makefile and TestVoting.c++; also closing issues that have already been addressed but haven't been closed by previous commits. closes #5, closes #4, closes #6, closes #7
+
+commit 824b26f0085922298bfaa7652e3fdf7ec0421d97
+Author: Trung Nguyen Ba <tantrung@cs.utexas.edu>
+Date:   Mon Sep 21 21:46:20 2015 -0500
+
+    fix bugs for case 3 adding UVa
+
+commit 65a1fefa65845b7927e9e0ef555712763af4c7d7
+Author: Trung Nguyen Ba <tantrung@cs.utexas.edu>
+Date:   Sun Sep 20 20:48:28 2015 -0500
+
+    fix bug for case 3 and case 2
+
+commit 3e3e23484b5c615ce696756218822ace8a4b5823
+Author: Trung Nguyen Ba <tantrung@cs.utexas.edu>
+Date:   Sun Sep 20 18:02:50 2015 -0500
+
+    add evaluate for case 1 and case 3
+
+commit f1e3f419cb008cb085e51985244b22a4f5d77716
+Author: Jesse Mendoza <unclejes@cs.utexas.edu>
+Date:   Sat Sep 19 17:47:50 2015 -0500
+
+    changed Voting.c++
+
+commit c12f5be3be772021ecc30bd9c97fbdd68b0c66de
+Author: Jesse Mendoza <unclejes@cs.utexas.edu>
+Date:   Sat Sep 19 17:33:06 2015 -0500
+
+    changed Voting.c++, Voting.h, RunVoting.c++, RunVoting.in
+
+commit f9443e3da3fff09fa656c72b8a0342b9ae832fd9
+Author: Jesse Mendoza <unclejes@cs.utexas.edu>
+Date:   Sat Sep 19 15:00:04 2015 -0500
+
+    change makefile and travis
+
+commit 288492af48a4222cc4fdc5aeb4a2922089423ca1
+Author: UncleJesse <unclejesse@utexas.edu>
+Date:   Fri Sep 18 14:54:35 2015 -0500
+
+    Initial commit
