@@ -1,3 +1,15 @@
+commit 99cb18ca65313444936349664b1132dc63044e33
+Author: unclejesse <unclejesse@utexas.edu>
+Date:   Thu Sep 24 17:49:39 2015 -0500
+
+    fix input, output file
+
+commit bdd6793c7f8c2351842940c45e4fa8ae1742dba8
+Author: unclejesse <unclejesse@utexas.edu>
+Date:   Wed Sep 23 21:17:02 2015 -0500
+
+    clean 3
+
 commit a60588c546848f73ca5edbac34188b56982ca9cc
 Author: unclejesse <unclejesse@utexas.edu>
 Date:   Wed Sep 23 21:14:35 2015 -0500
